@@ -23,14 +23,8 @@ using namespace std;
 	* a-z: 97-122
 * */
 
-bool isAlph(char &c){ 
-	bool rtrn = ((c>64)&&(c<91)) || ((c>96)&&(c<123));
-	return rtrn; 
-}
-bool isNum(string &s){
-	bool rtrn = (s.find_first_of("()*+-/=")==string::npos);
-	return rtrn;
-}
+bool isAlph(char &c){ return ((c>64)&&(c<91)) || ((c>96)&&(c<123)); }
+bool isNum(string &s){ return (s.find_first_of("()*+-/=")==string::npos); }
 
 stack<int> OKU(string &input){ //int >=0 -> int, <0 char //accepts lines
 	char c;
